@@ -18,7 +18,11 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        toolchain: [stable, "1.85"]
+        # MSRV anchor deferred until the API stabilizes at v1.0 — the
+        # transitive dep tree (clap → toml_edit, icu_*) churns its own
+        # MSRV faster than is worth chasing for a v0.1 research scaffold.
+        # Stable across three OSes is still meaningful coverage.
+        toolchain: [stable]
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@master
