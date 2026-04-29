@@ -1,0 +1,30 @@
+# ── Vendor identity ────────────────────────────────────────────────
+vendor: sony_bravia
+display_name: "Sony Bravia Professional Display"
+manufacturer: "Sony Electronics"
+product_family: "Bravia Professional / B2B (BZ / X / EZ series)"
+notes: |
+  Sony's Bravia Professional Display Simple IP Control (PSI) is JSON-RPC
+  over HTTP, plus an IRCC fallback for legacy commands not in the JSON
+  surface. Authentication is a Pre-Shared Key sent in `X-Auth-PSK`
+  headers (per-device, configured in the display's network menu).
+
+  research-stage; catalog data pending doc-crawl effort. The schema
+  is in place — `commands: []` is intentionally empty until the
+  doc-crawl populates real PSI methods / IRCC codes per abstract
+  command type.
+
+  Known firmware-string shape: `PKG6.2940.0030NAA` (PKG prefix +
+  base + build + region suffix). Version-matcher special-casing TBD
+  when real data lands.
+
+# ── Documentation sources ──────────────────────────────────────────
+sources: []
+
+# ── Protocol capabilities ──────────────────────────────────────────
+protocol_capabilities:
+  bravia_psi:
+    notes: "research-stage"
+
+# ── Commands ───────────────────────────────────────────────────────
+commands: []

@@ -1,0 +1,29 @@
+# ── Vendor identity ────────────────────────────────────────────────
+vendor: nec_naviset
+display_name: "NEC NaViSet"
+manufacturer: "Sharp NEC Display Solutions"
+product_family: "Large-format displays (E / V / P / X / C series), projectors"
+notes: |
+  NEC's NaViSet protocol is a binary control protocol historically
+  delivered over RS-232 and now also over TCP/7142. Modern NEC panels
+  also expose an HTTP API for management. Both are in scope for this
+  catalog.
+
+  research-stage; catalog data pending doc-crawl effort. The schema
+  is in place — `commands: []` is intentionally empty until the
+  doc-crawl populates real NaViSet command bytes / HTTP endpoints
+  per abstract command type.
+
+  Modern NEC firmware uses dotted SemVer; older panels use vendor-coded
+  strings. Version-matcher edge cases TBD when real data lands.
+
+# ── Documentation sources ──────────────────────────────────────────
+sources: []
+
+# ── Protocol capabilities ──────────────────────────────────────────
+protocol_capabilities:
+  rest_api:
+    notes: "research-stage; HTTP API available on modern panels"
+
+# ── Commands ───────────────────────────────────────────────────────
+commands: []

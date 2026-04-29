@@ -1,0 +1,41 @@
+# ── Vendor identity ────────────────────────────────────────────────
+vendor: pjlink
+display_name: "PJLink (cross-vendor projector standard)"
+manufacturer: "JBMIA / various"
+product_family: "Projectors (Class 1: power/input/lamp; Class 2: streaming + serial pass-through)"
+notes: |
+  PJLink is an open ASCII protocol on TCP/4352, governed by the Japan
+  Business Machine and Information System Industries Association
+  (JBMIA). It is the cross-vendor standard for projectors — supported
+  by Epson, Panasonic, NEC, Sony, Sharp, BenQ, ViewSonic, Optoma, and
+  many others. Class 1 covers basic control (power, input, mute, lamp
+  state, error queries); Class 2 (2010) added streaming control and
+  serial pass-through.
+
+  Because PJLink is cross-vendor and standardized, the same catalog
+  entries apply to every conforming projector — any per-vendor quirks
+  belong in vendor-specific files (e.g. `epson-projectors.yaml`,
+  `panasonic-projectors.yaml`) that override `pjlink_*` entries when
+  needed.
+
+  research-stage; catalog data pending doc-crawl effort. The schema
+  is in place — `commands: []` is intentionally empty until the
+  doc-crawl populates the standardized PJLink commands (POWR, INPT,
+  AVMT, INST, NAME, INF1, INF2, INFO, CLSS, ERST, LAMP) per abstract
+  command type.
+
+  Versioning is unusual: PJLink itself advertises a class number (1 or
+  2), not a SemVer firmware string. Per-projector firmware versions
+  exist but are vendor-specific; the catalog entry carries `class` not
+  `applies_to` SemVer ranges for the standardized commands.
+
+# ── Documentation sources ──────────────────────────────────────────
+sources: []
+
+# ── Protocol capabilities ──────────────────────────────────────────
+protocol_capabilities:
+  pjlink:
+    notes: "research-stage; class to be confirmed per-vendor"
+
+# ── Commands ───────────────────────────────────────────────────────
+commands: []

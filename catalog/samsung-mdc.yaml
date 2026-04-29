@@ -1,0 +1,28 @@
+# ── Vendor identity ────────────────────────────────────────────────
+vendor: samsung_mdc
+display_name: "Samsung MDC"
+manufacturer: "Samsung Electronics"
+product_family: "Commercial / SSSP / Tizen displays (DM/DH/QM/QH/QB/QE/UH series)"
+notes: |
+  Samsung's Multiple Display Control (MDC) is a binary protocol over
+  TCP/1515 (or RS-232 on legacy panels). Frames carry a header byte
+  (0xAA), command id, display id, length, data, and a checksum.
+
+  research-stage; catalog data pending doc-crawl effort. The schema
+  is in place — `commands: []` is intentionally empty until the
+  doc-crawl populates real command-id bytes / request frames per
+  abstract command type.
+
+  Known firmware-string shape: `T-KTM2DEUC` (family prefix + region
+  suffix). Version-matcher special-casing TBD when real data lands.
+
+# ── Documentation sources ──────────────────────────────────────────
+sources: []
+
+# ── Protocol capabilities ──────────────────────────────────────────
+protocol_capabilities:
+  mdc:
+    notes: "research-stage"
+
+# ── Commands ───────────────────────────────────────────────────────
+commands: []

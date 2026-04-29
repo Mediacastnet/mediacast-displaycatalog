@@ -1,0 +1,28 @@
+# ── Vendor identity ────────────────────────────────────────────────
+vendor: lg_webos
+display_name: "LG webOS Signage"
+manufacturer: "LG Electronics"
+product_family: "Commercial Signage / SCAP (UH5F / UH7F / SM5KE / SH7E series)"
+notes: |
+  LG's webOS Signage exposes the Secure Second Screen (SSAP) protocol
+  on TCP/3000 (or 3001 with TLS). SSAP is JSON-over-WebSocket; client
+  pairs once and is then issued a long-lived client-key token.
+
+  research-stage; catalog data pending doc-crawl effort. The schema
+  is in place — `commands: []` is intentionally empty until the
+  doc-crawl populates real SSAP URIs / payloads per abstract command
+  type.
+
+  Known firmware-string shape: dotted SemVer (5.5.0, 6.0.1, ...).
+  Plain SemVer should parse cleanly with the borrowed version matcher.
+
+# ── Documentation sources ──────────────────────────────────────────
+sources: []
+
+# ── Protocol capabilities ──────────────────────────────────────────
+protocol_capabilities:
+  webos_ssap:
+    notes: "research-stage"
+
+# ── Commands ───────────────────────────────────────────────────────
+commands: []
