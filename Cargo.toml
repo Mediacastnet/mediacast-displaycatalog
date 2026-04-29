@@ -2,7 +2,7 @@
 name = "mediacast-displaycatalog"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.78"
+rust-version = "1.85"
 description = "Vendor command catalog + version matcher + protocol probe for IP-managed displays (Samsung MDC, LG webOS, NEC NaViSet, Sony Bravia, PJLink projectors)."
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Mediacastnet/mediacast-displaycatalog"
